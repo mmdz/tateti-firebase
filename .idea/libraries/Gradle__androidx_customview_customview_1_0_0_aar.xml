@@ -3,8 +3,12 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e8bd99a5a4df439d2ee3a045f9082157/customview-1.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/96fc7205b81078d81fe0f94f364ee7bf/transformed/customview-1.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/96fc7205b81078d81fe0f94f364ee7bf/transformed/customview-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/96fc7205b81078d81fe0f94f364ee7bf/transformed/customview-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2662d7050bb15833384b548ce2e6e55b/transformed/customview-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b2d12963f1ca7db5244af80bbaea65da/transformed/customview-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6f22e5e16cc02590272308e3f0aad75a/transformed/customview-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/813c2ecab0ff3b63b12094454c93f434/transformed/customview-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/813c2ecab0ff3b63b12094454c93f434/transformed/customview-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/813c2ecab0ff3b63b12094454c93f434/transformed/customview-1.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
