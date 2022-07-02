@@ -58,6 +58,6 @@ dependencies {
 
     //dependencia para limite de referencia de 64k
     implementation "com.android.support:multidex:1.0.3"
-    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.5'
+    //implementation 'com.google.firebase:firebase-messaging-ktx:23.0.5'
 
 }

@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/melis/Desktop/TP_tateti-firebase/app/src/main/res/layout/actividad_inicial.xml" value="0.1" />
+        <entry key="..\:/Users/melis/Desktop/TP_tateti-firebase/app/src/main/res/layout/actividad_inicial.xml" value="0.33" />
         <entry key="..\:/Users/melis/Desktop/TP_tateti-firebase/app/src/main/res/layout/actividad_partida.xml" value="0.1" />
-        <entry key="..\:/Users/melis/Desktop/TP_tateti-firebase/app/src/main/res/layout/actividad_partidas.xml" value="0.10166358595194085" />
+        <entry key="..\:/Users/melis/Desktop/TP_tateti-firebase/app/src/main/res/layout/actividad_partidas.xml" value="0.22" />
+        <entry key="..\:/Users/melis/Desktop/TP_tateti-firebase/app/src/main/res/layout/actividad_registracion.xml" value="0.2" />
+        <entry key="..\:/Users/melis/Desktop/TP_tateti-firebase/app/src/main/res/layout/item_partida.xml" value="0.33" />
         <entry key="..\:/Users/melis/Desktop/TP_tateti-firebase/app/src/main/res/xml/valores_por_defecto.xml" value="0.1" />
       </map>
     </option>

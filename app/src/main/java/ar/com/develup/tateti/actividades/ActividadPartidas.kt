@@ -37,8 +37,8 @@ class ActividadPartidas : AppCompatActivity() {
         cerrarSesion.setOnClickListener { cerrarSesion() }
 
         // Obtener el usuario actual
-        //val usuario = FirebaseAuth.getInstance().currentUser?.email
-        //bienvenido.text = "Bienvenido $usuario"
+        val usuario = FirebaseAuth.getInstance().currentUser?.email
+        bienvenido.text = "Bienvenidx $usuario"
     }
 
     override fun onResume() {

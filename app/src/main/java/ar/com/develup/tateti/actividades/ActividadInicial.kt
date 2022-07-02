@@ -80,7 +80,7 @@ class ActividadInicial : AppCompatActivity() {
         }
         val fireBaseConfig = Firebase.remoteConfig
         fireBaseConfig.setConfigSettingsAsync(configSetting)
-        fireBaseConfig.setDefaultsAsync(mapOf("btn_olvide_mi_contrasena_habilitado" to false))
+        fireBaseConfig.setDefaultsAsync(R.xml.firebase_config_defaults) //por defecto es falso
 
     }
 
@@ -91,7 +91,7 @@ class ActividadInicial : AppCompatActivity() {
         Firebase.remoteConfig.fetchAndActivate().addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
                 val botonOlvideHabilitado =
-                    Firebase.remoteConfig.getBoolean("btn_olvideMicontrasenia")
+                    Firebase.remoteConfig.getBoolean("olvideMiContrasena")
                 if (botonOlvideHabilitado) {
                     olvideMiContrasena.visibility = View.VISIBLE
                 } else {

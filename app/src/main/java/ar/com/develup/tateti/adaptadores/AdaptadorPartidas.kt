@@ -12,6 +12,7 @@ import ar.com.develup.tateti.actividades.ActividadPartidas
 import ar.com.develup.tateti.modelo.Constantes
 import ar.com.develup.tateti.modelo.Partida
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.actividad_partidas.*
 import java.util.*
 
 class AdaptadorPartidas(
@@ -31,9 +32,11 @@ class AdaptadorPartidas(
         val creador = FirebaseAuth.getInstance().currentUser?.email
 
         holder.partida = partida
-        holder.idPartida.text = """Creador: ${partida.creador} 
-        id: ${partida.id}"""
+        holder.idPartida.text = """Creador: ${partida.creador}    
+        idPartida: ${partida.id}"""
         holder.estado.text = partida.calcularEstado()
+
+
     }
 
     override fun getItemCount(): Int {

@@ -18,9 +18,9 @@
         android:id="@+id/estado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Maribel"
+        android:layout_below="@+id/idPartida"
         android:layout_marginTop="8dp"
-        android:layout_below="@+id/idPartida"/>
+        tools:text="Maribel" />
 
     <View
         android:layout_width="match_parent"

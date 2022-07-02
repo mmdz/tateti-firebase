@@ -17,6 +17,6 @@ data class Partida(@kotlin.jvm.JvmField var id: String? = null) : Serializable {
     fun calcularEstado() = when {
         oponente == null -> "ESPERANDO OPONENTE"
         ganador == null -> "EN JUEGO"
-        else -> "PARTIDA FINALIZADA. GADANADOR: $ganador"
+        else -> "PARTIDA FINALIZADA. EL GANADOR ES: $ganador"
     }
 }
