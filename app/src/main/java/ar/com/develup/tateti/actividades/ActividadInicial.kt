@@ -75,7 +75,8 @@ class ActividadInicial : AppCompatActivity() {
         // TODO-04-REMOTECONFIG
         // Configurar los valores por default para remote config, por codigo
         val configSetting =  remoteConfigSettings{
-            minimumFetchIntervalInSeconds = 30
+            minimumFetchIntervalInSeconds = 30 //tiempo entre actualizaciones
+            fetchTimeoutInSeconds = 10 //tiempo de espera
         }
         val fireBaseConfig = Firebase.remoteConfig
         fireBaseConfig.setConfigSettingsAsync(configSetting)

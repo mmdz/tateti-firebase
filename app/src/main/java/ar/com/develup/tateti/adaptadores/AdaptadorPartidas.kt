@@ -11,10 +11,11 @@ import ar.com.develup.tateti.actividades.ActividadPartida
 import ar.com.develup.tateti.actividades.ActividadPartidas
 import ar.com.develup.tateti.modelo.Constantes
 import ar.com.develup.tateti.modelo.Partida
+import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 
 class AdaptadorPartidas(
-        private val actividad: ActividadPartidas
+    private val actividad: ActividadPartidas
 ) : RecyclerView.Adapter<AdaptadorPartidas.Holder>() {
 
     private val partidas: MutableList<Partida> = ArrayList()
@@ -26,8 +27,12 @@ class AdaptadorPartidas(
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         val partida = partidas[position]
+
+        val creador = FirebaseAuth.getInstance().currentUser?.email
+
         holder.partida = partida
-        holder.idPartida.text = partida.id
+        holder.idPartida.text = """Creador: ${partida.creador} 
+        id: ${partida.id}"""
         holder.estado.text = partida.calcularEstado()
     }
 

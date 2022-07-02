@@ -9,12 +9,13 @@ import ar.com.develup.tateti.R
 import ar.com.develup.tateti.adaptadores.AdaptadorPartidas
 import ar.com.develup.tateti.modelo.Constantes
 import ar.com.develup.tateti.modelo.Partida
-import com.google.firebase.analytics.FirebaseAnalytics.*
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+//import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.actividad_partidas.*
 
@@ -33,16 +34,11 @@ class ActividadPartidas : AppCompatActivity() {
         partidas.layoutManager = LinearLayoutManager(this)
         partidas.adapter = adaptadorPartidas
         nuevaPartida.setOnClickListener { nuevaPartida() }
-
-        //implementar cierre sesion !!!
-            //cerrarSesion.setOnClickListener { cerrarSesion() }
+        cerrarSesion.setOnClickListener { cerrarSesion() }
 
         // Obtener el usuario actual
-        val usuario = FirebaseAuth.getInstance().currentUser?.email
-
-        //implementar saludo !!!
-            //bienvenido.text = "Bienvenido $usuario"
-
+        //val usuario = FirebaseAuth.getInstance().currentUser?.email
+        //bienvenido.text = "Bienvenido $usuario"
     }
 
     override fun onResume() {
@@ -58,7 +54,7 @@ class ActividadPartidas : AppCompatActivity() {
         //Eventos de Firebase Analytics
         val bundle = Bundle()
         bundle.putString("email_creador", FirebaseAuth.getInstance().currentUser?.email)
-        getInstance(this).logEvent("Nueva_Partida", bundle)
+        FirebaseAnalytics.getInstance(this).logEvent("Nueva_Partida", bundle)
 
         val intent = Intent(this, ActividadPartida::class.java)
         startActivity(intent)
@@ -106,9 +102,9 @@ class ActividadPartidas : AppCompatActivity() {
         //Eventos en FireBase
         val bundle = Bundle()
         bundle.putString("se_deslogueo", FirebaseAuth.getInstance().currentUser?.email)
-        getInstance(this).logEvent("desloguearse", bundle)
+        FirebaseAnalytics.getInstance(this).logEvent("desloguearse", bundle)
 
-        FirebaseAuth.getInstance().signOut()
+        FirebaseAuth.getInstance().signOut() // para cerrar sesion
         val intent = Intent(this, ActividadInicial::class.java)
         startActivity(intent)
     }
